@@ -6,6 +6,7 @@
 *********************************************************************/
 #include "Validate.hpp"
 #include <string>
+#include <cmath>
 
 /*********************************************************************
 ** Description: Function checks if input string has negative '-' sign. 
@@ -29,6 +30,10 @@ bool isNegative(std::string& inputString) {
 ** Returns: Bool, true if valid integer.
 *********************************************************************/
 bool isInteger(std::string& inputString) {
+
+	if (inputString == "") {
+		return false;
+	}
 
 	// For loop starts at inputString[0]
 	int i = 0;
@@ -96,6 +101,34 @@ bool isDecimal(std::string& inputString) {
 
 	}
 
-	// No errors found, return true.
-	return true;
+	// One decimal found
+	if (numDecimals == 1) {
+		return true;
+	}
+
+	// Valid int, but no decimals 
+	return false;
+}
+
+/*********************************************************************
+** Description: Function converts input to integer
+** Arguments: string
+** Returns: Int.  Returns 0 if string not valid integer.
+** Notes: If string is not valid int, return 0.
+*********************************************************************/
+int convertToInteger(std::string& inputString) {
+
+	int outputNumber = 0;
+
+	if (isInteger(inputString)) {
+		if (isNegative(inputString)) {
+			outputNumber = stoi(inputString.erase(0, 1));
+			outputNumber *= -1;
+		}
+		else {
+			outputNumber = stoi(inputString);
+		}
+	}
+	
+	return outputNumber;
 }

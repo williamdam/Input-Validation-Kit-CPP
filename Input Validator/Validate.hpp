@@ -18,4 +18,7 @@ bool isInteger(std::string& inputString);
 // Checks if string is valid decimal
 bool isDecimal(std::string& inputString);
 
+// Convert number to integer
+int convertToInteger(std::string& inputString);
+
 #endif

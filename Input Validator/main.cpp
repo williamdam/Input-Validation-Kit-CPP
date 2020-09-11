@@ -13,7 +13,7 @@
 int main() {
 
 	// Fixed array of strings for input
-	std::string inputCases[15] = { "", " ", "-23", "0", "1", "23532",
+	std::string inputCases[15] = { "", " ", "-23", "0", "12", "23532",
 		"22.5", "0.2", "-.3", "-3.50", "asdf", "a5.5", "1 234", "55.", "23..2" };
 
 	// Get num elements in array
@@ -24,7 +24,8 @@ int main() {
 		std::cout << "\"" << inputCases[i] << "\", ";
 		std::cout << "isNegative: " << isNegative(inputCases[i]) << ", ";
 		std::cout << "isInteger: " << isInteger(inputCases[i]) << ", ";
-		std::cout << "isDecimal: " << isDecimal(inputCases[i]) << std::endl;
+		std::cout << "isDecimal: " << isDecimal(inputCases[i]) << ", ";
+		std::cout << "Number: " << convertToInteger(inputCases[i]) << std::endl;
 	}
 
 	return 0;

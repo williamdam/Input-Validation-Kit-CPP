@@ -13,12 +13,14 @@ File Descriptions
 
 Validate.hpp - Header file contains function prototypes.
 Validate.cpp - Implementation file contains all input validation functionss.
-	isNegative(string) - Takes a string input and returns true if string
+	isNegative(string) - Takes a string arg and returns true if string
 	starts with '-' char.
-	isInteger(string) - Takes a string input and returns true if string
+	isInteger(string) - Takes a string arg and returns true if string
 	is a valid integer.
-	isDecimal(string) - Takes a string input and returns true if string
+	isDecimal(string) - Takes a string arg and returns true if string
 	is a valid decimal number.
+	convertToInteger(string) - Takes a string arg and returns integer value.
+	To be used only after verifying isInteger(string) == true.
 main.cpp - Contains main program file to demonstrate functionality of functions.
 
 Dependencies
