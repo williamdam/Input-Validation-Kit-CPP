@@ -50,14 +50,19 @@ string inputString = "";
 bool isValidInt = false;
 
 while (isValidInt == false) {
+	
 	std::cout << "Enter an integer: ";
+	
 	getline(std::cin, inputString);
+	
 	if (isInteger(inputString) == true) {
 		isValidInt == true;
 	}
+	
 	else {
 		std::cout << std::endl;
 		std::cout << "You must enter a valid integer!\n";
 	}
+
 }
 	
