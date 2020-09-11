@@ -2,7 +2,7 @@
 ** Author: William Dam
 ** Date: 09-10-2020
 ** Description: Validate.hpp is the specification file for the
-** input validation functions, contained in a separate implementation
+** input validation kit, contained in a separate implementation
 ** file.
 *********************************************************************/
 #ifndef Validate_hpp

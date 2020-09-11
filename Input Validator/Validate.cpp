@@ -1,6 +1,33 @@
+/*********************************************************************
+** Author: William Dam
+** Date: 09-10-2020
+** Description: Validate.cpp is the implementation file for the
+** input validation kit.
+*********************************************************************/
 #include "Validate.hpp"
 #include <string>
 
+/*********************************************************************
+** Description: Function checks if input string has negative '-' sign. 
+** Arguments: string
+** Returns: Bool, true if negative sign '-' present.
+*********************************************************************/
+bool isNegative(std::string& inputString) {
+
+	// Return true if first char is '-'
+	if (inputString[0] == 45) {
+		return true;
+	}
+
+	// No negative sign found, return false
+	return false;
+}
+
+/*********************************************************************
+** Description: Function checks if input string is valid integer.
+** Arguments: string
+** Returns: Bool, true if valid integer.
+*********************************************************************/
 bool isInteger(std::string& inputString) {
 
 	// For loop starts at inputString[0]
@@ -28,8 +55,11 @@ bool isInteger(std::string& inputString) {
 	return true;
 }
 
-
-
+/*********************************************************************
+** Description: Function checks if input string is valid decimal.
+** Arguments: string
+** Returns: Bool, true if valid decimal.
+*********************************************************************/
 bool isDecimal(std::string& inputString) {
 
 	// For loop starts at inputString[0]
@@ -68,16 +98,4 @@ bool isDecimal(std::string& inputString) {
 
 	// No errors found, return true.
 	return true;
-}
-
-
-bool isNegative(std::string& inputString) {
-
-	// Return true if first char is '-'
-	if (string[0] == 45) {
-		return true;
-	}
-
-	// No negative sign found, return false
-	return false;
 }
