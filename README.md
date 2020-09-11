@@ -21,6 +21,9 @@ Validate.cpp - Implementation file contains all input validation functionss.
 	is a valid decimal number.
 	convertToInteger(string) - Takes a string arg and returns integer value.
 	To be used only after verifying isInteger(string) == true.
+	convertToDecimal(string) - Takes a string arg and returns float value.
+	To be used only after verifying isDecimal(string) == true.
+
 main.cpp - Contains main program file to demonstrate functionality of functions.
 
 Dependencies

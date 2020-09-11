@@ -132,3 +132,26 @@ int convertToInteger(std::string& inputString) {
 	
 	return outputNumber;
 }
+
+/*********************************************************************
+** Description: Function converts input to floating point decimal
+** Arguments: string
+** Returns: Float.  Returns 0 if string not valid float.
+** Notes: If string is not valid float, return 0.
+*********************************************************************/
+float convertToDecimal(std::string& inputString) {
+	
+	float outputNumber = 0;
+
+	if (isDecimal(inputString)) {
+		if (isNegative(inputString)) {
+			outputNumber = stof(inputString.erase(0, 1));
+			outputNumber *= -1;
+		}
+		else {
+			outputNumber = stof(inputString);
+		}
+	}
+
+	return outputNumber;
+}

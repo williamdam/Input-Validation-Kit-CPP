@@ -21,4 +21,7 @@ bool isDecimal(std::string& inputString);
 // Convert number to integer
 int convertToInteger(std::string& inputString);
 
+// Convert number to float
+float convertToDecimal(std::string& inputString);
+
 #endif

@@ -25,7 +25,17 @@ int main() {
 		std::cout << "isNegative: " << isNegative(inputCases[i]) << ", ";
 		std::cout << "isInteger: " << isInteger(inputCases[i]) << ", ";
 		std::cout << "isDecimal: " << isDecimal(inputCases[i]) << ", ";
-		std::cout << "Number: " << convertToInteger(inputCases[i]) << std::endl;
+		
+		if (isInteger(inputCases[i])) {
+			std::cout << "Int: " << convertToInteger(inputCases[i]) << std::endl;
+		}
+		else if (isDecimal(inputCases[i])) {
+			std::cout << "Float: " << convertToDecimal(inputCases[i]) << std::endl;
+		}
+		else {
+			std::cout << "Invalid number.\n";
+		}
+		
 	}
 
 	return 0;
